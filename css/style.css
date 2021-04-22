@@ -28,7 +28,7 @@ body{
     align-items: center;
 }
 .header-img img{
-    width: 40px;
+    width: 50px;
     border-radius: 50%;
 }
 
@@ -56,7 +56,7 @@ body{
     border-right: 1px solid gray;
 }
 .sx-container .sub-header{
-    height: 15%;
+    height: 10%;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -96,7 +96,7 @@ body{
 }
 /*Main SX*/
 .sx-container .main{
-    height: 65%;
+    height: 70%;
 }
 .lista-contatti-container{
     height: 100%;
@@ -109,7 +109,7 @@ body{
 }
 .contatto img{
     border-radius: 50%;
-    width: 40px;
+    width: 60px;
     margin-right: 20px;
 }
 
@@ -155,29 +155,28 @@ body{
 
 
 /*messaggi*/
-.message-box-sent{   
+.message-box-received{
+    display: flex;
+    justify-content: flex-end;
+}
+.message-box-sent{ /*forse inutile*/
+    display: flex;
+    justify-content: flex-start;
+}
+.message-sent{   
     background-color: white;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px 10px;
     width: 50%;
     margin: 10px 0;
-    float: left;
+    
 }
-.message-box-sent:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
-.message-box-received{   
+
+.message-received{   
     background-color: green;
     border-radius: 10px;
-    padding: 10px;
+    padding: 20px 10px;
     width: 50%;
     margin: 10px 0;
-    float: right; 
+     
 }
-.message-box-received:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
