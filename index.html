@@ -47,15 +47,14 @@
                             <i class="fas fa-search"></i>
                             <input type="text" placeholder="Cerca o trova una nuova chat">
                         </div>
-
                     </div>
                     <!--fine header-->
                     <!--main-->
                     <div class="main">
                         <div class="lista-contatti-container">
                             <div v-for="element in contacts" class="contatto padding">
-                                    <img v-bind:src=" 'img/avatar' + 'element.avatar' + '.jpg' " alt=""> 
-                                    <p>{{ element.name }}</p>
+                                <img v-bind:src="'img/avatar' + element.avatar + '.jpg'" alt="">
+                                <p>{{ element.name }}</p>
                             </div>
                         </div>
                     </div>
@@ -72,17 +71,27 @@
                         </div>
                         <div class="username">
                             <p>Nome Utente</p>
+                            <p class="ultimo-accesso">Ultimo accesso oggi alle</p>
                         </div>
                         <div class="menu">
-                            <i class="fas fa-circle-notch"></i>
-                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-search"></i>
+                            <i class="fas fa-paperclip"></i>
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
                     </div>
                     <!--fine header-->
                      <!--main-->
                      <div class="main">
+                         <div class="message-area">
 
+                         </div>
+                         <div class="write-message">
+                                 <div class="input-message">
+                                    <i class="far fa-smile"></i>
+                                     <input type="text" placeholder="Scrivi un messaggio">
+                                     <i id="microfono" class="fas fa-microphone"></i>
+                                 </div>
+                         </div>
                     </div>
                     <!--fine main-->
                 </div>

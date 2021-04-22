@@ -7,12 +7,13 @@
 
 /*COMMON*/
 body{
-    background-color: gray;
+    background: rgb(0,149,135);
+    background: linear-gradient(180deg, rgba(0,149,135,1) 20%, rgba(213,218,216,1) 20%);
 }
 .padding{
     padding: 10px 10px;
 }
-.fas{
+.fas, .far{
     color: #bcbcbc;
     font-size: 20px;
 }
@@ -21,7 +22,7 @@ body{
 }
 .header{
     height: 10%;
-    background-color: #d9dbd4;
+    background-color: #eaeaea;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -30,6 +31,7 @@ body{
     width: 40px;
     border-radius: 50%;
 }
+
 
 
 /*App container*/
@@ -79,15 +81,18 @@ body{
 }
 .cerca-container{
     height: 10%;
-    background-color: #d9dbd4;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
 }
 .cerca-container .cerca{
     background-color: white;
-    text-align: center;
-    line-height: 30px
+    padding-left: 10px;
+    
 }
 .cerca input{
-    width: 80%;
+    
+    width: 300px;
     border: none;
 }
 .cerca .fas{
@@ -99,7 +104,7 @@ body{
 }
 .lista-contatti-container{
     height: 100%;
-    background-color: #d9dbd4;
+    background-color: white;
 }
 .lista-contatti-container .contatto{
     height: 20%;
@@ -112,19 +117,40 @@ body{
     margin-right: 20px;
 }
 
-
-
-
-
-
-
-
 /*Parte DX*/
 .dx-container{
     float: right;
     width: 70%;
-    background-color: deeppink;/*DEBUG*/
     height: 700px;/*DEBUG*/
 }
-
-
+/*Header DX*/
+.ultimo-accesso{
+    font-size: 15px;
+    color: #bcbcbc;
+}
+/*Main DX*/
+.dx-container .main{
+    height: 90%;
+}
+.main .message-area{
+    height: 90%;
+    background-image: url(../img/wallpaper.jpg);
+}
+.main .write-message{
+    height: 10%;
+    background-color: #eaeaea;
+}
+.main .write-message .input-message{
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.input-message input{
+    width: 700px;
+    border: none;
+    padding: 10px 0;
+}
+#microfono{
+    color: #6a7376;
+}
