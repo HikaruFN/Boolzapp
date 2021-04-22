@@ -7,37 +7,124 @@
 
 /*COMMON*/
 body{
-    background-color: rgba(0,149,136,1) /*DEBUG POI INSERISCI GREDIENTE*/
+    background-color: gray;
+}
+.padding{
+    padding: 10px 10px;
+}
+.fas{
+    color: #bcbcbc;
+    font-size: 20px;
+}
+.header .fas{
+    padding-left: 15px;
+}
+.header{
+    height: 10%;
+    background-color: #d9dbd4;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.header-img img{
+    width: 40px;
+    border-radius: 50%;
 }
 
 
 /*App container*/
 .app-container{
-    height: 500px;/*DEBUG*/
+    height: 700px;/*DEBUG*/
     max-width: 1200px;/*DEBUG*/
     margin: 10px auto;
     background-color: grey;
 }
-.app-container::after {
+.app-container::after{
     content: "";
-    clear: both;
     display: table;
+    clear: both;
   }
-  
+
+
 
 /*Parte SX*/
 .sx-container{
     float: left;
     width: 30%;
-    background-color: aqua;
-    height: 500px;/*DEBUG*/
+    height: 700px;/*DEBUG*/
+}
+/*Header SX*/
+.sx-container .header{
+    border-right: 1px solid gray;
+}
+.sx-container .sub-header{
+    height: 15%;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    background-color: #8edafb;
+}
+.sub-header .bell-container{
+    padding: 10px;
+    margin-right: 10px;
+    background-color: white;
+    border-radius: 50%;
+}
+.bell-container .fas{
+    color: #8edafb;
+}
+.notifiche a{
+    color: #6a9fb7;
+}
+.cerca-container{
+    height: 10%;
+    background-color: #d9dbd4;
+}
+.cerca-container .cerca{
+    background-color: white;
+    text-align: center;
+    line-height: 30px
+}
+.cerca input{
+    width: 80%;
+    border: none;
+}
+.cerca .fas{
+    cursor: pointer;
+}
+/*Main SX*/
+.sx-container .main{
+    height: 65%;
+}
+.lista-contatti-container{
+    height: 100%;
+    background-color: #d9dbd4;
+}
+.lista-contatti-container .contatto{
+    height: 20%;
+    display: flex;
+    align-items: center;
+}
+.contatto img{
+    border-radius: 50%;
+    width: 40px;
+    margin-right: 20px;
 }
 
 
-/*Parte SX*/
+
+
+
+
+
+
+/*Parte DX*/
 .dx-container{
     float: right;
     width: 70%;
     background-color: deeppink;/*DEBUG*/
-    height: 500px;/*DEBUG*/
+    height: 700px;/*DEBUG*/
 }
+
+

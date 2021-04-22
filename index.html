@@ -15,9 +15,80 @@
 
         <!--MAIN-->
         <main>
-                <div class="app-container">
+            <div class="app-container">
 
+                <!--Parte SX-->
+                <div class="sx-container">
+                    <!--header-->
+                    <div class="header padding">
+                        <div class="header-img">
+                            <img src="img/avatar_io.jpg" alt="avatar_io">
+                        </div>
+                        <div class="username">
+                            <p>Nome Utente</p>
+                        </div>
+                        <div class="menu">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <div class="sub-header padding">
+                        <div class="bell-container">
+                            <i class="fas fa-bell-slash"></i>
+                        </div>
+                        <div class="notifiche">
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <a href="*">Attiva notifiche desktop</a>
+                        </div>
+                    </div>
+                    <div class="cerca-container padding">
+                        <div class="cerca ">
+                            <i class="fas fa-search"></i>
+                            <input type="text" placeholder="Cerca o trova una nuova chat">
+                        </div>
+
+                    </div>
+                    <!--fine header-->
+                    <!--main-->
+                    <div class="main">
+                        <div class="lista-contatti-container">
+                            <div v-for="element in contacts" class="contatto padding">
+                                    <img v-bind:src=" 'img/avatar' + 'element.avatar' + '.jpg' " alt=""> 
+                                    <p>{{ element.name }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!--fine main-->
                 </div>
+                <!--Parte SX-->
+
+                <!--Parte DX-->
+                <div class="dx-container">
+                    <!--header-->
+                    <div class="header padding">
+                        <div class="header-img">
+                            <img src="img/avatar_io.jpg" alt="avatar_io">
+                        </div>
+                        <div class="username">
+                            <p>Nome Utente</p>
+                        </div>
+                        <div class="menu">
+                            <i class="fas fa-circle-notch"></i>
+                            <i class="fas fa-comment-alt"></i>
+                            <i class="fas fa-ellipsis-v"></i>
+                        </div>
+                    </div>
+                    <!--fine header-->
+                     <!--main-->
+                     <div class="main">
+
+                    </div>
+                    <!--fine main-->
+                </div>
+
+                <!--Parte DX-->
+            </div>
         </main>
         <!--FINE MAIN-->
 
