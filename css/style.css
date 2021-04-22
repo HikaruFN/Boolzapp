@@ -133,11 +133,7 @@ body{
     background-image: url(../img/wallpaper.png);
     padding: 20px 40px;
 }
-.message-area:after {
-    content: "";
-    display: table;
-    clear: both;
-  }
+
 .main .write-message{
     height: 10%;
     background-color: #eaeaea;
@@ -159,16 +155,24 @@ body{
 
 
 /*messaggi*/
+.message-box-sent:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 .message-box-sent{   
     background-color: white;
     border-radius: 10px;
     padding: 10px;
     width: 50%;
     margin: 10px 0;
-    
-    
-   
+    float: left;
 }
+.message-box-received:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 .message-box-received{   
     background-color: green;
     border-radius: 10px;
