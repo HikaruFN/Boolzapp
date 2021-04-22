@@ -1,0 +1,20 @@
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*COMMON*/
+body{
+    background-color: green;
+}
+
+
+/*App container*/
+.app-container{
+    height: 500px;/*DEBUG*/
+    max-width: 500px;/*DEBUG*/
+    margin: 10px auto;
+    background-color: grey;
+}
