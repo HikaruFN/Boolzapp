@@ -7,14 +7,37 @@
 
 /*COMMON*/
 body{
-    background-color: green;
+    background-color: rgba(0,149,136,1) /*DEBUG POI INSERISCI GREDIENTE*/
 }
 
 
 /*App container*/
 .app-container{
     height: 500px;/*DEBUG*/
-    max-width: 500px;/*DEBUG*/
+    max-width: 1200px;/*DEBUG*/
     margin: 10px auto;
     background-color: grey;
+}
+.app-container::after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+
+/*Parte SX*/
+.sx-container{
+    float: left;
+    width: 30%;
+    background-color: aqua;
+    height: 500px;/*DEBUG*/
+}
+
+
+/*Parte SX*/
+.dx-container{
+    float: right;
+    width: 70%;
+    background-color: deeppink;/*DEBUG*/
+    height: 500px;/*DEBUG*/
 }
