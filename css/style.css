@@ -155,6 +155,7 @@ body{
     height: 90%;
     background-color: #e1dad2;
     padding: 20px 40px;
+    overflow: auto;
 }
 /*barra Messaggio input*/
 .main .write-message{
@@ -183,13 +184,13 @@ body{
     position: relative;
 }
 .received{
-    justify-content: flex-end;
-}
-.sent{ 
     justify-content: flex-start;
 }
+.sent{ 
+    justify-content: flex-end;
+}
 .message-sent{   
-    background-color: white;
+    background-color: #d5f9ba;
     border-radius: 10px;
     padding: 20px 10px;
     max-width: 50%;
@@ -198,7 +199,7 @@ body{
     
 }
 .message-received{   
-    background-color: #d5f9ba;
+    background-color: white;
     border-radius: 10px;
     padding: 20px 10px;
     max-width: 50%;

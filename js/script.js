@@ -110,14 +110,13 @@ var app = new Vue(
             inviaMessaggio(){
                 if(this.messaggioInputUtente != ''){
                     this.contacts[this.contattoAttivo].messages.push({
-                    date: '10/01/2020 15:50:00',
+                    date: dayjs().format('YYYY/MM/DD HH:MM:SS'),
                     text: this.messaggioInputUtente,
                     status: 'sent',
                     stileMessaggio: 'message-sent'});
+                    this.messaggioInputUtente = '';
                 }
-
-            }
-            
+            }   
         },
     }
 );
