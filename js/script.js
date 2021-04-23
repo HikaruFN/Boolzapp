@@ -115,6 +115,13 @@ var app = new Vue(
                     status: 'sent',
                     stileMessaggio: 'message-sent'});
                     this.messaggioInputUtente = '';
+                    setTimeout(()=>{
+                        this.contacts[this.contattoAttivo].messages.push({
+                            date: dayjs().format('YYYY/MM/DD HH:MM:SS'),
+                            text: 'ok',
+                            status: 'received',
+                            stileMessaggio: 'message-received'});
+                    }, 1000);
                 }
             }   
         },
