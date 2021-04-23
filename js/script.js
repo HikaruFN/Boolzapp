@@ -2,8 +2,9 @@ var app = new Vue(
     {
         el: '#root',
         data: {
-            
+            //Contatto attivo di Default
             contattoAttivo: 2,
+            //variabile legata alla imput contenuta in => input-message nell'HTML
             messaggioInputUtente: '',
             contacts: [
                 {
@@ -15,7 +16,7 @@ var app = new Vue(
                             date: '10/01/2020 15:30:55',
                             text: 'Hai portato a spasso il cane?',
                             status: 'sent',
-                            stileMessaggio: 'message-sent'
+                            stileMessaggio: 'message-sent' //--chiave aggiunta per assegnare la classe dinamica ai messaggi con chiave corrispondente
                         },
                         {
                             date: '10/01/2020 15:50:00',
@@ -27,7 +28,7 @@ var app = new Vue(
                             date: '10/01/2020 16:15:22',
                             text: 'Tutto fatto!',
                             status: 'received',
-                            stileMessaggio: 'message-received'
+                            stileMessaggio: 'message-received' //--chiave aggiunta per assegnare la classe dinamica ai messaggi con chiave corrispondente
                         }
                     ],
                 },
@@ -104,9 +105,12 @@ var app = new Vue(
             
         },
         methods: {
+            //al click sull contatto cambia l'indice sul contatto attuale, cambiando a catena il resto del DOM con le info dell'utente
             cambiaContatto(index){
                 this.contattoAttivo = index;
             },
+            //Dopo aver premuto il tasto Enter il messaggio viene pushato all'interno dell'array di oggetti => messages e stampato di conseguenza
+            //Dopo 1 secondo verra pushato nello stasso array un nuovo oggetto contenete una messaggio automatico di risposta
             inviaMessaggio(){
                 if(this.messaggioInputUtente != ''){
                     this.contacts[this.contattoAttivo].messages.push({
@@ -127,5 +131,3 @@ var app = new Vue(
         },
     }
 );
-//Aggiunta di un messaggio:
-// l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
