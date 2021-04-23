@@ -54,6 +54,7 @@
                             <i class="fas fa-search"></i>
                             <input 
                             v-model="contenutoFiltro"
+                            @keyup="filtro"
                             type="text" 
                             placeholder="Cerca o trova una nuova chat">
                         </div>
@@ -69,6 +70,7 @@
                             v-for="(contatto, index) in contacts" 
                             class="contatto padding" 
                             :class="{ 'active' : index == contattoAttivo}"
+                            v-if="contatto.visible==true"
                             @click="cambiaContatto(index)">
                                 <img v-bind:src="'img/avatar' + contatto.avatar + '.jpg'" alt="contatto.name">
                                 <p>{{ contatto.name }}</p>
@@ -109,8 +111,8 @@
                              <div v-for="(message, index) in contacts[contattoAttivo].messages" :class="message.status" class="message-box">
                                  <div 
                                  class="message" 
-                                 :class="message.stileMessaggio"
-                                 v-if="contacts[contattoAttivo].status=='true'"><!--debug-->
+                                 :class="message.status == 'sent' ? 'message-sent' : 'message-received'"
+                                 ><!--Rivedi questa stringa-->
                                     <p>{{message.text}}</p>
                                     <span class="data">{{message.date}}</span>
                                  </div>

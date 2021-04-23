@@ -1,6 +1,7 @@
 var app = new Vue(
     {
         el: '#root',
+        
         data: {
             //Contatto attivo di Default
             contattoAttivo: 2,
@@ -17,8 +18,7 @@ var app = new Vue(
                         {
                             date: '10/01/2020 15:30:55',
                             text: 'Hai portato a spasso il cane?',
-                            status: 'sent',
-                            stileMessaggio: 'message-sent' //--chiave aggiunta per assegnare la classe dinamica ai messaggi con chiave corrispondente
+                            status: 'sent'
                         },
                         {
                             date: '10/01/2020 15:50:00',
@@ -29,8 +29,7 @@ var app = new Vue(
                         {
                             date: '10/01/2020 16:15:22',
                             text: 'Tutto fatto!',
-                            status: 'received',
-                            stileMessaggio: 'message-received' //--chiave aggiunta per assegnare la classe dinamica ai messaggi con chiave corrispondente
+                            status: 'received'
                         }
                     ],
                 },
@@ -42,20 +41,17 @@ var app = new Vue(
                         {
                             date: '20/03/2020 16:30:00',
                             text: 'Ciao come stai?',
-                            status: 'sent',
-                            stileMessaggio: 'message-sent'
+                            status: 'sent'
                         },
                         {
                             date: '20/03/2020 16:30:55',
                             text: 'Bene grazie! Stasera ci vediamo?',
-                            status: 'received',
-                            stileMessaggio: 'message-received'
+                            status: 'received'
                         },
                         {
                             date: '20/03/2020 16:35:00',
                             text: 'Mi piacerebbe ma devo andare a fare la spesa.',
-                            status: 'sent',
-                            stileMessaggio: 'message-sent'
+                            status: 'sent'
                         }
                     ],
                 },
@@ -67,20 +63,17 @@ var app = new Vue(
                         {
                             date: '28/03/2020 10:10:40',
                             text: 'La Marianna va in campagna',
-                            status: 'received',
-                            stileMessaggio: 'message-received'
+                            status: 'received'
                         },
                         {
                             date: '28/03/2020 10:20:10',
                             text: 'Sicuro di non aver sbagliato chat?',
-                            status: 'sent',
-                            stileMessaggio: 'message-sent'
+                            status: 'sent'
                         },
                         {
                             date: '28/03/2020 16:15:22',
                             text: 'Ah scusa!',
-                            status: 'received',
-                            stileMessaggio: 'message-received'
+                            status: 'received'
                         }
                     ],
                 },
@@ -92,14 +85,12 @@ var app = new Vue(
                         {
                             date: '10/01/2020 15:30:55',
                             text: 'Lo sai che ha aperto una nuova pizzeria?',
-                            status: 'sent',
-                            stileMessaggio: 'message-sent'
+                            status: 'sent'
                         },
                         {
                             date: '10/01/2020 15:50:00',
                             text: 'Si, ma preferirei andare al cinema',
-                            status: 'received',
-                            stileMessaggio: 'message-received'
+                            status: 'received'
                         }
                     ],
                 },
@@ -129,10 +120,19 @@ var app = new Vue(
                             stileMessaggio: 'message-received'});
                     }, 1000);
                 }
-            }   
-
-            
-        },
+            }, 
+            //
+            filtro(){
+                this.contacts.forEach((element) => {
+                    console.log(this.contacts);
+                    if(element.name.includes(this.contenutoFiltro)){
+                        element.visible=true;
+                    }else{
+                        element.visible=false;
+                    }
+                });
+            }, 
+        }
     }
 );
 // Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite
