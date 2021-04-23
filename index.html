@@ -19,7 +19,8 @@
 
                 <!--Parte SX-->
                 <div class="sx-container">
-                    <!--header-->
+                    <!--header SX-->
+                    <!--Info Utente + Menu-->
                     <div class="header padding">
                         <div class="header-contact-info">
                             <div class="header-img">
@@ -35,6 +36,8 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
                     </div>
+                    <!--Fine Info Utente + Menu-->
+                    <!--Notifiche-->
                     <div class="notifiche-container padding">
                         <div class="bell-container">
                             <i class="fas fa-bell-slash"></i>
@@ -44,36 +47,47 @@
                             <a href="*">Attiva notifiche desktop</a>
                         </div>
                     </div>
+                    <!--Fine Notifiche-->
+                    <!--Filtro-->
                     <div class="cerca-container padding">
                         <div class="cerca ">
                             <i class="fas fa-search"></i>
                             <input type="text" placeholder="Cerca o trova una nuova chat">
                         </div>
                     </div>
-                    <!--fine header-->
-                    <!--main-->
+                    <!--Fine Filtro-->
+                    <!--fine header SX-->
+                    <!--main SX-->
                     <div class="main">
+                        <!--Lista Contatti-->
                         <div class="lista-contatti-container">
-                            <div v-for="(element, index) in contacts" class="contatto padding">
+                            <!--Contatti-->
+                            <div 
+                            v-for="(element, index) in contacts"
+                             class="contatto padding" :class="{ 'active' : index == contattoAttivo}"
+                             >
                                 <img v-bind:src="'img/avatar' + element.avatar + '.jpg'" alt="">
-                                <p>{{ element.name }}-{{index}}</p>
+                                <p>{{ element.name }}</p>
                             </div>
+                            <!--Fine Contatti-->
                         </div>
+                        <!--Fine Lista Contatti-->
                     </div>
-                    <!--fine main-->
+                    <!--fine main SX-->
                 </div>
                 <!--Parte SX-->
 
                 <!--Parte DX-->
                 <div class="dx-container">
-                    <!--header-->
+                    <!--header Dx-->
+                    <!--Info Utente + Menu-->
                     <div class="header padding">
                         <div class="header-contact-info">
                             <div class="header-img">
                                 <img src="img/avatar_io.jpg" alt="avatar_io">
                             </div>
                             <div class="username">
-                                <p>Nome Utente</p>
+                                <p>{{}}</p>
                                 <p class="ultimo-accesso">Ultimo accesso oggi alle</p>
                             </div>
                         </div>
@@ -83,9 +97,11 @@
                             <i class="fas fa-ellipsis-v"></i>
                         </div>
                     </div>
-                    <!--fine header-->
-                     <!--main-->
+                    <!--Fine Info Utente + Menu-->
+                    <!--fine header Dx-->
+                     <!--main Dx-->
                      <div class="main">
+                         <!--Area Messaggi-->
                          <div class="message-area">
                              <div class="message-box-sent">
                                 <div class="message-sent">
@@ -99,8 +115,9 @@
                                     <span><!--orario--></span>
                                  </div>
                              </div>
-                             
                          </div>
+                         <!--Fine Area Messaggi-->
+                         <!--Barra Messaggio Input-->
                          <div class="write-message">
                             <div class="input-message">
                             <i class="far fa-smile"></i>
@@ -108,8 +125,9 @@
                                 <i id="microfono" class="fas fa-microphone"></i>
                             </div>
                          </div>
+                         <!--Fine Barra Messaggio Input-->
                     </div>
-                    <!--fine main-->
+                    <!--fine main Dx-->
                 </div>
                 <!--fine Parte DX-->
             </div>

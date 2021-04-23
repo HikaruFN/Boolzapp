@@ -14,7 +14,7 @@ body{
     font-family: Verdana, sans-serif;
 }
 .padding{
-    padding: 10px 10px;
+    padding: 10px;
 }
 .fas, .far{
     color: #bcbcbc;
@@ -55,7 +55,7 @@ body{
 .sx-container{
     float: left;
     width: 30%;
-    height: 700px;/*DEBUG*/
+    height: 100%;
 }
 /*Header SX*/
 .sx-container .header{
@@ -64,11 +64,11 @@ body{
 .sx-container .notifiche-container{
     height: 10%;
     display: flex;
-    flex-direction: row;
     justify-content: flex-start;
     align-items: center;
     background-color: #8edafb;
 }
+/*Notifiche*/
 .notifiche-container .bell-container{
     padding: 10px;
     margin-right: 10px;
@@ -81,6 +81,7 @@ body{
 .notifiche a{
     color: #6a9fb7;
 }
+/*Cerca*/
 .cerca-container{
     height: 10%;
     background-color: #eaeaea;
@@ -104,6 +105,7 @@ body{
 .sx-container .main{
     height: 70%;
 }
+/*Lista contatti*/
 .lista-contatti-container{
     height: 100%;
     background-color: white;
@@ -113,7 +115,12 @@ body{
     display: flex;
     align-items: center;
     border-bottom: 1px solid lightgray;
+    cursor: pointer;
 }
+.lista-contatti-container .contatto:hover{
+    background-color: lightgray;
+}
+/*Contatto*/
 .contatto img{
     border-radius: 50%;
     width: 60px;
@@ -122,6 +129,9 @@ body{
 .contatto p{
     position: relative;
     bottom: 15px;
+}
+.active{
+    background-color: gray;
 }
 
 /*Parte DX*/
@@ -139,12 +149,13 @@ body{
 .dx-container .main{
     height: 90%;
 }
+/*Area messaggi*/
 .main .message-area{
     height: 90%;
     background-color: #e1dad2;
     padding: 20px 40px;
 }
-
+/*barra Messaggio input*/
 .main .write-message{
     height: 10%;
     background-color: #eaeaea;
@@ -163,9 +174,7 @@ body{
 #microfono{
     color: #6a7376;
 }
-
-
-/*messaggi*/
+/*Messaggi*/
 .message-box-received{
     display: flex;
     justify-content: flex-end;
