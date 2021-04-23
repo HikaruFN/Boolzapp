@@ -4,6 +4,7 @@ var app = new Vue(
         data: {
             
             contattoAttivo: 2,
+            messaggioInputUtente: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -105,8 +106,13 @@ var app = new Vue(
         methods: {
             cambiaContatto(index){
                 this.contattoAttivo = index;
+            },
+            inviaMessaggio(){
+
             }
             
         },
     }
 );
+//Aggiunta di un messaggio:
+// l’utente scrive un testo nella parte bassa e digitando “enter” il testo viene aggiunto al thread sopra, come messaggio verde
