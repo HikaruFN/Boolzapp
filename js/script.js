@@ -108,6 +108,13 @@ var app = new Vue(
                 this.contattoAttivo = index;
             },
             inviaMessaggio(){
+                if(this.messaggioInputUtente != ''){
+                    this.contacts[this.contattoAttivo].messages.push({
+                    date: '10/01/2020 15:50:00',
+                    text: this.messaggioInputUtente,
+                    status: 'sent',
+                    stileMessaggio: 'message-sent'});
+                }
 
             }
             
