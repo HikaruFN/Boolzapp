@@ -9,6 +9,7 @@
 body{
     background: rgb(0,149,135);
     background: linear-gradient(180deg, rgba(0,149,135,1) 20%, rgba(213,218,216,1) 20%);
+    background-repeat: no-repeat;
     width: 100%;
     height: 100vh;
     font-family: Verdana, sans-serif;
@@ -44,8 +45,8 @@ body{
 
 /*App container*/
 .app-container{
-    height: 700px;/*DEBUG*/
-    max-width: 1200px;/*DEBUG*/
+    height: 700px;
+    max-width: 1200px;
     min-width: 900px;
     margin: 30px auto;
     background-color: grey;
@@ -54,7 +55,7 @@ body{
 /*Parte SX*/
 .sx-container{
     float: left;
-    width: 30%;
+    width: 35%;
     height: 100%;
 }
 /*Header SX*/
@@ -137,7 +138,7 @@ body{
 /*Parte DX*/
 .dx-container{
     float: right;
-    width: 70%;
+    width: 65%;
     height: 700px;/*DEBUG*/
 }
 /*Header DX*/
