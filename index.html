@@ -52,7 +52,10 @@
                     <div class="cerca-container padding">
                         <div class="cerca ">
                             <i class="fas fa-search"></i>
-                            <input type="text" placeholder="Cerca o trova una nuova chat">
+                            <input 
+                            v-model="contenutoFiltro"
+                            type="text" 
+                            placeholder="Cerca o trova una nuova chat">
                         </div>
                     </div>
                     <!--Fine Filtro-->
@@ -103,8 +106,11 @@
                      <div class="main">
                          <!--Area Messaggi-->
                          <div class="message-area">
-                             <div v-for="message in contacts[contattoAttivo].messages" :class="message.status" class="message-box">
-                                 <div class="message" :class="message.stileMessaggio">
+                             <div v-for="(message, index) in contacts[contattoAttivo].messages" :class="message.status" class="message-box">
+                                 <div 
+                                 class="message" 
+                                 :class="message.stileMessaggio"
+                                 v-if="contacts[contattoAttivo].status=='true'"><!--debug-->
                                     <p>{{message.text}}</p>
                                     <span class="data">{{message.date}}</span>
                                  </div>

@@ -4,8 +4,10 @@ var app = new Vue(
         data: {
             //Contatto attivo di Default
             contattoAttivo: 2,
-            //variabile legata alla imput contenuta in => input-message nell'HTML
+            //variabile legata alla imput contenuta in => div con classe 'input-message' nell'HTML
             messaggioInputUtente: '',
+            //variabile legata alla imput contenuta in => div con classe 'cerca' nell'HTML
+            contenutoFiltro: '',
             contacts: [
                 {
                     name: 'Michele',
@@ -128,6 +130,10 @@ var app = new Vue(
                     }, 1000);
                 }
             }   
+
+            
         },
     }
 );
+// Ricerca utenti: scrivendo qualcosa nell’input a sinistra, vengono visualizzati solo i contatti il cui nome contiene le lettere inserite
+// (es, Marco, Matteo Martina -> Scrivo “mar” rimangono solo Marco e Martina)
