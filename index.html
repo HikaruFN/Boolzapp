@@ -63,11 +63,12 @@
                         <div class="lista-contatti-container">
                             <!--Contatti-->
                             <div 
-                            v-for="(element, index) in contacts"
-                             class="contatto padding" :class="{ 'active' : index == contattoAttivo}"
-                             >
-                                <img v-bind:src="'img/avatar' + element.avatar + '.jpg'" alt="">
-                                <p>{{ element.name }}</p>
+                            v-for="(contatto, index) in contacts" 
+                            class="contatto padding" 
+                            :class="{ 'active' : index == contattoAttivo}"
+                            @click="cambiaContatto(index)">
+                                <img v-bind:src="'img/avatar' + contatto.avatar + '.jpg'" alt="contatto.name">
+                                <p>{{ contatto.name }}</p>
                             </div>
                             <!--Fine Contatti-->
                         </div>
@@ -76,7 +77,6 @@
                     <!--fine main SX-->
                 </div>
                 <!--Parte SX-->
-
                 <!--Parte DX-->
                 <div class="dx-container">
                     <!--header Dx-->
@@ -84,10 +84,10 @@
                     <div class="header padding">
                         <div class="header-contact-info">
                             <div class="header-img">
-                                <img src="img/avatar_io.jpg" alt="avatar_io">
+                                <img :src="'img/avatar' + contacts[contattoAttivo].avatar + '.jpg'" alt="contacts[contattoAttivo].name">
                             </div>
                             <div class="username">
-                                <p>{{}}</p>
+                                <p>{{ contacts[contattoAttivo].name }}</p>
                                 <p class="ultimo-accesso">Ultimo accesso oggi alle</p>
                             </div>
                         </div>
@@ -103,16 +103,10 @@
                      <div class="main">
                          <!--Area Messaggi-->
                          <div class="message-area">
-                             <div class="message-box-sent">
-                                <div class="message-sent">
-                                    <p>prova</p>
-                                    <span><!--orario--></span>
-                                </div>
-                             </div>
-                             <div class="message-box-received">
-                                 <div class="message-received">
-                                    <p>prova</p>
-                                    <span><!--orario--></span>
+                             <div v-for="message in contacts[contattoAttivo].messages" :class="message.status" class="message-box">
+                                 <div class="message" :class="message.stileMessaggio">
+                                    <p>{{message.text}}</p>
+                                    <span class="data">{{message.date}}</span>
                                  </div>
                              </div>
                          </div>

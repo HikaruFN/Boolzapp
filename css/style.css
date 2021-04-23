@@ -131,7 +131,7 @@ body{
     bottom: 15px;
 }
 .active{
-    background-color: gray;
+    background-color: lightgray;
 }
 
 /*Parte DX*/
@@ -175,12 +175,16 @@ body{
     color: #6a7376;
 }
 /*Messaggi*/
-.message-box-received{
+.message-box{
     display: flex;
+}
+.message{
+    position: relative;
+}
+.received{
     justify-content: flex-end;
 }
-.message-box-sent{ 
-    display: flex;
+.sent{ 
     justify-content: flex-start;
 }
 .message-sent{   
@@ -200,4 +204,12 @@ body{
     min-width: 30%;
     margin-bottom: 10px;
      
+}
+.data{
+    font-size: 7px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding-right: 5px;
+    color: gray;
 }
