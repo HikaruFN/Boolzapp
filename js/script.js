@@ -23,8 +23,7 @@ var app = new Vue(
                         {
                             date: '10/01/2020 15:50:00',
                             text: 'Ricordati di dargli da mangiare',
-                            status: 'sent',
-                            stileMessaggio: 'message-sent'
+                            status: 'sent'
                         },
                         {
                             date: '10/01/2020 16:15:22',
@@ -121,7 +120,8 @@ var app = new Vue(
                     }, 1000);
                 }
             }, 
-            //
+            //Funzione che controlla ogni volta che viene premuto un tasto se la stringa è inclusa nel nome dell'oggetto e la rende visibile o meno => contacts.name
+            //---aggiungi controlla fra stinghe minuscole---
             filtro(){
                 this.contacts.forEach((element) => {
                     console.log(this.contacts);

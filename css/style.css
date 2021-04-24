@@ -7,7 +7,6 @@
 
 /*COMMON*/
 body{
-    background: rgb(0,149,135);
     background: linear-gradient(180deg, rgba(0,149,135,1) 20%, rgba(213,218,216,1) 20%);
     background-repeat: no-repeat;
     width: 100%;
@@ -49,7 +48,6 @@ body{
     max-width: 1200px;
     min-width: 900px;
     margin: 30px auto;
-    background-color: grey;
     display: flex;
     
 }
@@ -122,14 +120,32 @@ body{
     background-color: lightgray;
 }
 /*Contatto*/
+.contatto{
+    position: relative;
+}
 .contatto img{
     border-radius: 50%;
     width: 60px;
     margin-right: 20px;
 }
-.contatto p{
+.contatto .nome-contatto{
     position: relative;
-    bottom: 15px;
+    bottom: 20px;
+}
+.ultimo-massaggio{
+    color: gray;
+    font-size: 12px;
+    position: relative;
+    top: 10px;
+    right: 40px;
+}
+.ultima-data{
+    color: gray;
+    font-size: 8px;
+    padding-right: 5px;
+    position: absolute;
+    top: 0;
+    right: 0;
 }
 .active{
     background-color: lightgray;

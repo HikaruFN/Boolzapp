@@ -73,7 +73,10 @@
                             v-if="contatto.visible==true"
                             @click="cambiaContatto(index)">
                                 <img v-bind:src="'img/avatar' + contatto.avatar + '.jpg'" alt="contatto.name">
-                                <p>{{ contatto.name }}</p>
+                                <span class="nome-contatto">{{ contatto.name }}</span>
+                                <p class="ultimo-massaggio">{{ contatto.messages[contatto.messages.length-1].text }}</p>
+                                <span class="ultima-data">{{ contatto.messages[contatto.messages.length-1].date }}</span>
+                                
                             </div>
                             <!--Fine Contatti-->
                         </div>
@@ -137,6 +140,7 @@
                 </div>
                 <!--fine Parte DX-->
             </div>
+            
         </main>
         <!--FINE MAIN-->
 
