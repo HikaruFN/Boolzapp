@@ -73,10 +73,14 @@
                             v-if="contatto.visible==true"
                             @click="cambiaContatto(index)">
                                 <img v-bind:src="'img/avatar' + contatto.avatar + '.jpg'" alt="contatto.name">
-                                <span class="nome-contatto">{{ contatto.name }}</span>
-                                <p class="ultimo-massaggio">{{ contatto.messages[contatto.messages.length-1].text }}</p>
-                                <span class="ultima-data">{{ contatto.messages[contatto.messages.length-1].date }}</span>
+                                <div class="last-container"> 
+                                <p class="nome-contatto">{{ contatto.name }}</p>
+                                <p  v-if="contacts[contattoAttivo].messages.length" class="ultimo-massaggio">{{ contatto.messages[contatto.messages.length-1].text }}</p>
                                 
+                                <p class="online" v-else>Online</p>
+                                <p class="online" v-else>Online</p>
+                                </div>
+                                <p  v-if="contacts[contattoAttivo].messages.length" class="ultima-data">{{ contatto.messages[contatto.messages.length-1].date }}</p>
                             </div>
                             <!--Fine Contatti-->
                         </div>
@@ -115,9 +119,24 @@
                                  <div 
                                  class="message" 
                                  :class="message.status == 'sent' ? 'message-sent' : 'message-received'"
-                                 ><!--Rivedi questa stringa-->
+                                 >
                                     <p>{{message.text}}</p>
-                                    <span class="data">{{message.date}}</span>
+                                    <p class="data">{{message.date}}</p>
+                                    <span id="icona-menu-tendina"><i 
+                                        @click=" mostraDropdown(index)"
+                                        class="fas fa-chevron-down"></i></span>
+                                    <!--Dropdown-->
+                                    <div
+                                    v-if="message.dropdownVisibility == true" 
+                                    class="dropdown">
+                                        <ul class="dropdown-menu">
+                                            <li>info messaggio</li>
+                                            <li
+                                            @click="cancellaMessagio(index)" 
+                                            class="cancella-messaggio">cancella messaggio</li>
+                                        </ul>
+                                    </div>
+                                    <!--Fine Dropdown-->
                                  </div>
                              </div>
                          </div>
