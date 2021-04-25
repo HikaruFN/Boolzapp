@@ -133,10 +133,8 @@ var app = new Vue(
                 }
             }, 
             //Funzione che controlla ogni volta che viene premuto un tasto se la stringa è inclusa nel nome dell'oggetto e la rende visibile o meno => contacts.name
-            //---aggiungi controlla fra stinghe minuscole---
             filtro(){
                 this.contacts.forEach((element) => {
-                    console.log(this.contacts);
                     if(element.name.toLowerCase().includes(this.contenutoFiltro.toLowerCase())){
                         element.visible=true;
                     }else{
@@ -153,9 +151,13 @@ var app = new Vue(
                     this.contacts[this.contattoAttivo].messages[index].dropdownVisibility = false;
                 }
             },
-            //*Funzione che elimina il messaggio selezionato ( non riesco ad eliminare il primo )
+            //*Funzione che elimina il messaggio selezionato ( Bug quando si cancella l'ultimo messaggio )
             cancellaMessagio(index){
                 this.contacts[this.contattoAttivo].messages.splice(index, 1);
+            },
+            limitaStringa(stringa){
+                let questaStringa = stringa.slice(0, 30);
+                return questaStringa = questaStringa + '...';
             },
         }
     }
