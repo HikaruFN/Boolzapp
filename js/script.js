@@ -155,6 +155,7 @@ var app = new Vue(
             cancellaMessagio(index){
                 this.contacts[this.contattoAttivo].messages.splice(index, 1);
             },
+            //Funzione che taglia la stringa se è maggiore di 30 caratteri ed aggiunge '...'
             limitaStringa(stringa){
                 let questaStringa = stringa.slice(0, 30);
                 return questaStringa = questaStringa + '...';
@@ -162,4 +163,4 @@ var app = new Vue(
         }
     }
 );
-//puntini se messaggio troppo lungo 
+

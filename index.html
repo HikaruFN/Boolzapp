@@ -76,7 +76,7 @@
                                 <div class="last-container"> 
                                 <p class="nome-contatto">{{ contatto.name }}</p>
                                 <p v-if="contacts[contattoAttivo].messages.length" class="ultimo-massaggio">{{ limitaStringa(contatto.messages[contatto.messages.length-1].text) }}</p>
-                                <p class="online" v-else>Online</p>
+                                <p class="online" v-else>Online</p> <!--IL PROBLEMA E' QUI'-->
                                 </div>
                                 <p  v-if="contacts[contattoAttivo].messages.length" class="ultima-data">{{ contatto.messages[contatto.messages.length-1].date }}</p>
                             </div>

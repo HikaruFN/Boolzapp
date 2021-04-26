@@ -41,7 +41,6 @@ body{
     align-items: center;
 }
 
-
 /*App container*/
 .app-container{
     height: 80vh;
@@ -96,6 +95,7 @@ body{
     height: 40px;
     width: 300px;
     border: none;
+    padding: 10px;
 }
 .cerca .fas{
     cursor: pointer;
@@ -215,7 +215,7 @@ body{
 .input-message input{
     width: 700px;
     border: none;
-    padding: 10px 0;
+    padding: 10px;
 }
 #microfono{
     color: #6a7376;
