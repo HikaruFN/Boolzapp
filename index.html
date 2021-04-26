@@ -75,10 +75,10 @@
                                 <img v-bind:src="'img/avatar' + contatto.avatar + '.jpg'" alt="contatto.name">
                                 <div class="last-container"> 
                                 <p class="nome-contatto">{{ contatto.name }}</p>
-                                <p v-if="contacts[contattoAttivo].messages.length" class="ultimo-massaggio">{{ limitaStringa(contatto.messages[contatto.messages.length-1].text) }}</p>
+                                <p v-if="contatto.messages.length" class="ultimo-massaggio">{{ limitaStringa(contatto.messages[contatto.messages.length-1].text) }}</p>
                                 <p class="online" v-else>Online</p> <!--IL PROBLEMA E' QUI'-->
                                 </div>
-                                <p  v-if="contacts[contattoAttivo].messages.length" class="ultima-data">{{ contatto.messages[contatto.messages.length-1].date }}</p>
+                                <p  v-if="contatto.messages.length" class="ultima-data">{{ contatto.messages[contatto.messages.length-1].date }}</p>
                             </div>
                             <!--Fine Contatti-->
                         </div>
